@@ -4,5 +4,18 @@ function comprobaraño (dia, mes, año) {
     var semanadelano = fecha.getWeek();
     var bisiesto = fecha.isLeapYear();
 
-    console.log("El dia de la semana es: " + dia_semana);
+    document.write("El dia de la semana es: " + dia_semana);
 }
+
+function recibir () {
+    var fecha = $("#fecha").val()
+    var dia_semana = fecha.getDay();
+
+    document.getElementById("texto").innerText("El dia de la semana es: " + dia_semana);
+
+}
+
+
+document.getElementById("fecha").addEventListener("change", recibir);
+
+

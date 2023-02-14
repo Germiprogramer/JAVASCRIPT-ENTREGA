@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="ejercicio4.js"></script>
+
+        
     </head>
     <body>
           <form action="" method="get">
                 <input type="date" name="fecha" id="fecha">
+                <p id="texto"></p>
+                <script>
+                    function recibir () {
+                        var fecha = $("#fecha").val()
+                        var dia_semana = fecha.getDay();
+
+                        document.getElementById("texto").innerText="El dia de la semana es: " + dia_semana;
+
+                    }
+
+                    document.getElementById("fecha").addEventListener(input, recibir())
+                </script>
 
           </form> 
+          
+          <h1>ejercicio1</h1>
+          <script src="ejercicio1.js"></script>
+          <h1>ejercicio2</h1>
+          <script src="ejercicio2.js"></script>
+          <h1>ejercicio3</h1>
+
           
     </body>
 </html>
