@@ -1,20 +1,10 @@
-var anio = document.getElementById("anio");
-var mes = document.getElementById("mes");
-var dia = document.getElementById("dia");
+
 var boton = document.getElementById("boton");
-var parrafo = document.getElementById("parrafo");
 
 
+boton.addEventListener("click", sacarfecha)
 
-
-
-
-function sacarfecha() {
-    var date = new Date(anio,mes,dia)
-    document.write(date)
-}
-
-function esbisiesto () {
+function esbisiesto (anio) {
     if (anio/400 == 0) {
         var bisiesto = true
     } 
@@ -27,11 +17,16 @@ function esbisiesto () {
     else {
         var bisiesto = false
     }
-    return bisiesto
+    if (bisiesto == true) {
+        return "El anio es bisiesto"
+    }
+    else {
+        return "El anio no es bisiesto"
+    }
 
 }
 
-function diadelasemana () {
+function diadelasemana (date) {
     var dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
 
     var num_dia = date.getDay()
@@ -39,7 +34,24 @@ function diadelasemana () {
     return dia
 }
 
-function 
+function semanadelanio (date) {
+    var unoenero = new Date(date.getFullYear(), 0, 1);
+    var numerodedias = Math.floor((date - unoenero) / (24 * 60 * 60 * 1000));
+    var resultado = Math.ceil((date.getDay() + 1 + numerodedias) / 7);
+    return resultado
+}
+
+function sacarfecha() {
+    var parrafo = document.getElementById("parrafo");
+    var anio = document.getElementById("anio").value;
+    var mes = document.getElementById("mes").value;
+    var dia = document.getElementById("dia").value;
+    var date = new Date(anio,mes,dia)
+    parrafo.innerHTML = "El dia de la semana es: " + diadelasemana(date) + "<br>" + esbisiesto(anio) + "<br>" + "La semana del anio es: " + semanadelanio(date); 
+}
+
+
+
 
 
 

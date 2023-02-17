@@ -1,71 +1,40 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="ejercicio1.js"></script>
-        <script src="ejercicio2.js"></script>
+        <title>Entrega Javascript</title>
+        <link rel="stylesheet" href="style.css">
         <script src="ejercicio4.js"></script>
+        <script src="ejercicio5.js"> </script>
+        
     </head>
     <body>
    
         </form> 
-
-        <!--
-        <script>
-
-            var date = document.getElementById("fecha")
-            var bloque = document.getElementById("bloque")
-            var boton = document.getElementById("boton")
-            var datefecha = Date(fecha)
-
-            function diasemana (fecha) {
-                var dia_semana = datefecha.getDay();
-                return dia_semana;
-            }
-
-            function semanadelanio (fecha) {
-                var semanadelanio = datefecha.getWeek();
-                return semanadelanio;
-            }
-
-            function esbisiesto (fecha) {
-                var bisiesto = datefecha.isLeapYear();
-                return bisiesto
-            }
-
-            function imprimir(fecha) {
-                document.write(diasemana(date))
-            }
-
-            boton.addEventListener("click", imprimir(date))
-
-        </script>
-    -->
-          
           
       
 
         <h1>Ejercicio 1</h1>
-        
+            <script src="ejercicio1.js"></script>
         <h1>Ejercicio 2</h1>
-        
+            <script src="ejercicio2.js"></script>
         <h1>Ejercicio 3</h1>
         
         <h1>Ejercicio 4</h1>
-        <form action="" method="get">
+        
+        <form action="javascript:sacarfecha()">
             <input name="anio" id="anio" placeholder="anio">
             <input name="mes" id="mes" placeholder="mes">
             <input name="dia" id="dia" placeholder="dia">
-            <button id="boton" onclick="sacarfecha()">Pulsa</button>
-            <p id="parrafo"></p>
-        <div id="bloque">
-        
-        <h1>Ejercicio 5</h1>
-        <form id="formu" action="" method="POST">
-            <input id="correo" placeholder="correo"> 
-            <button id="boton" type="submit" >ENVIAR</button>
+            <input class="boton" type="submit" value="PULSA" id="boton">
         </form>
-          
-
-          
+        <p id="parrafo"></p>
+         
+        <h1>Ejercicio 5</h1>
+        
+        <form id="formu" action="javascript:validaCorreo()">
+            <input id="correo" placeholder="correo"> 
+            <input class="boton" type="submit" value="PULSA" id="boton2">
+        </form>
+                
     </body>
 </html>
