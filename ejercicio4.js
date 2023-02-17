@@ -1,21 +1,63 @@
-function comprobaraño (dia, mes, año) {
-    var fecha = new Date(año, mes, dia);
-    var dia_semana = fecha.getDay();
-    var semanadelano = fecha.getWeek();
-    var bisiesto = fecha.isLeapYear();
+var anio = document.getElementById("anio");
+var mes = document.getElementById("mes");
+var dia = document.getElementById("dia");
+var boton = document.getElementById("boton");
+var parrafo = document.getElementById("parrafo");
 
-    document.write("El dia de la semana es: " + dia_semana);
+
+
+
+
+
+function sacarfecha() {
+    var date = new Date(anio,mes,dia)
+    document.write(date)
 }
 
-function recibir () {
-    var fecha = $("#fecha").val()
-    var dia_semana = fecha.getDay();
-
-    document.getElementById("texto").innerText("El dia de la semana es: " + dia_semana);
+function esbisiesto () {
+    if (anio/400 == 0) {
+        var bisiesto = true
+    } 
+    else if (anio/100 == 0) {
+        var bisiesto = false
+    }
+    else if (anio/4 == 0) {
+        var bisiesto = true
+    }
+    else {
+        var bisiesto = false
+    }
+    return bisiesto
 
 }
 
+function diadelasemana () {
+    var dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"]
 
-document.getElementById("fecha").addEventListener("change", recibir);
+    var num_dia = date.getDay()
+    var dia = dias[num_dia]
+    return dia
+}
+
+function 
 
 
+
+
+
+
+
+
+
+/*
+function esbisiesto (fecha) {
+    var bisiesto = datefecha.isLeapYear();
+    return bisiesto
+}
+
+function imprimir(fecha) {
+    document.write(esbisiesto(fecha))
+}
+
+boton.addEventListener("click", imprimir(date))
+*/
