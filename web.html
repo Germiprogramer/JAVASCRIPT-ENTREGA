@@ -1,32 +1,70 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-        
+        <script src="ejercicio1.js"></script>
+        <script src="ejercicio2.js"></script>
+        <script src="ejercicio4.js"></script>
     </head>
     <body>
-          <form action="" method="get">
-                <input type="date" name="fecha" id="fecha">
-                <p id="texto"></p>
-                <script>
-                    function recibir () {
-                        var fecha = $("#fecha").val()
-                        var dia_semana = fecha.getDay();
+   
+        </form> 
 
-                        document.getElementById("texto").innerText="El dia de la semana es: " + dia_semana;
+        <!--
+        <script>
 
-                    }
+            var date = document.getElementById("fecha")
+            var bloque = document.getElementById("bloque")
+            var boton = document.getElementById("boton")
+            var datefecha = Date(fecha)
 
-                    document.getElementById("fecha").addEventListener(input, recibir())
-                </script>
+            function diasemana (fecha) {
+                var dia_semana = datefecha.getDay();
+                return dia_semana;
+            }
 
-          </form> 
+            function semanadelanio (fecha) {
+                var semanadelanio = datefecha.getWeek();
+                return semanadelanio;
+            }
+
+            function esbisiesto (fecha) {
+                var bisiesto = datefecha.isLeapYear();
+                return bisiesto
+            }
+
+            function imprimir(fecha) {
+                document.write(diasemana(date))
+            }
+
+            boton.addEventListener("click", imprimir(date))
+
+        </script>
+    -->
           
-          <h1>ejercicio1</h1>
-          <script src="ejercicio1.js"></script>
-          <h1>ejercicio2</h1>
-          <script src="ejercicio2.js"></script>
-          <h1>ejercicio3</h1>
+          
+      
+
+        <h1>Ejercicio 1</h1>
+        
+        <h1>Ejercicio 2</h1>
+        
+        <h1>Ejercicio 3</h1>
+        
+        <h1>Ejercicio 4</h1>
+        <form action="" method="get">
+            <input name="anio" id="anio" placeholder="anio">
+            <input name="mes" id="mes" placeholder="mes">
+            <input name="dia" id="dia" placeholder="dia">
+            <button id="boton" onclick="sacarfecha()">Pulsa</button>
+            <p id="parrafo"></p>
+        <div id="bloque">
+        
+        <h1>Ejercicio 5</h1>
+        <form id="formu" action="" method="POST">
+            <input id="correo" placeholder="correo"> 
+            <button id="boton" type="submit" >ENVIAR</button>
+        </form>
+          
 
           
     </body>
