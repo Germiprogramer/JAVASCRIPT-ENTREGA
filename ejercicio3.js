@@ -15,7 +15,7 @@ function comprobarArmstrong(numero) {
 }
 
 function hallararmstrong() {
-    for (var i = 1; 100 <= i <= 1000; i++) {
+    for (var i = 100; i <= 1000; i++) {
         if (comprobarArmstrong(i) == true) {
             document.write(i + " es un numero de Armstrong" + "<br>");
         }
