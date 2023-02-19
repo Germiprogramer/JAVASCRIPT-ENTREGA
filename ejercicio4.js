@@ -60,16 +60,3 @@ function sacarfecha() {
 
 
 
-
-/*
-function esbisiesto (fecha) {
-    var bisiesto = datefecha.isLeapYear();
-    return bisiesto
-}
-
-function imprimir(fecha) {
-    document.write(esbisiesto(fecha))
-}
-
-boton.addEventListener("click", imprimir(date))
-*/

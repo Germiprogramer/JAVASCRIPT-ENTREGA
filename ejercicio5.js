@@ -1,4 +1,3 @@
-var correo = document.getElementById("correo");
 var boton = document.getElementById("boton2");
 
 function validaCorreo() {
@@ -14,6 +13,7 @@ function validaCorreo() {
         correo.preventDefault();
     }
 }
+
 
 
 

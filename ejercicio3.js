@@ -1,17 +1,17 @@
 function comprobarArmstrong(numero) {
-    var suma = 0;
-    for (var i = 0; i < numero; i++) {
-        for (var j = 0; j < numero; j++) {
-            for (var k = 0; k < numero; k++) {
-                var suma = i**3 + j**3 + k**3;
-                if (suma == numero) {
-                    return true;
-                }
-            }
-        }
-    
+    var num = numero;
+    var e, d = 0;
+    while (numero >0) {
+        e = numero % 10;
+        d = d + (e * e * e);
+        numero = parseInt(numero / 10);
     }
-    return false;
+    if (d == num) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 function hallararmstrong() {
